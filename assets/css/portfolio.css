@@ -7,14 +7,6 @@ body {
   cursor: url(../images/logo/mirjam.svg), auto;
 }
 
-.card-img-overlay {
-  display: none;
-}
-
-.card-img-overlay:hover {
-  display: block;
-}
-
 .meine-schrift {
   font-family: drept;
   font-weight: bold;
