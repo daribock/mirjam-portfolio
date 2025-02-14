@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
   <body>
-    <!-- Header -->
+    <!-- Navbar -->
     <header>
       <nav class="navbar border-bottom blur-30 fixed-top">
         <div class="container-fluid">
@@ -80,7 +80,7 @@
     </header>
 
     <!-- Main -->
-    <main class="mt-5">
+    <main>
       <!-- Head -->
       <header class="container my-5">
         <div class="row align-items-center">
@@ -101,22 +101,121 @@
         </div>
       </header>
 
-      <section class="card m-5">
-        <article class="bg-primary Display-3">
-          <div class="h1 p-2 text-lacquer text-white">Mirjam Kletter</div>
-          <div class="card-body">
-            <blockquote class="blockquote mb-0 text-white">
-              <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod, no sea takimata sanctus est Lorem ipsum
-                dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam
+      <article>
+        <!-- Projekt 1 -->
+        <section>
+          <div class="card mb-3">
+            <img
+              src="./assets/images/photoshop-projects/pexels-medhat-ayad-122846-383568.jpg"
+              class="card-img-top"
+              alt="Bilder Collage"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
               </p>
-            </blockquote>
+
+              <!-- Offcanvas -->
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling"
+                aria-controls="offcanvasScrolling"
+              >
+                Enable body scrolling
+              </button>
+
+              <div
+                class="offcanvas offcanvas-start"
+                data-bs-scroll="true"
+                data-bs-backdrop="false"
+                tabindex="-1"
+                id="offcanvasScrolling"
+                aria-labelledby="offcanvasScrollingLabel"
+              >
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+                    Offcanvas with body scrolling
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <p>
+                    Try scrolling the rest of the page to see this option in
+                    action.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </article>
-      </section>
+        </section>
+
+        <!-- Projekt 2 -->
+        <section>
+          <div class="card mb-3">
+            <img
+              src="./assets/images/photoshop-projects/pexels-medhat-ayad-122846-383568.jpg"
+              class="card-img-top"
+              alt="Bilder Collage"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+
+              <!-- Offcanvas -->
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling"
+                aria-controls="offcanvasScrolling"
+              >
+                Enable body scrolling
+              </button>
+
+              <div
+                class="offcanvas offcanvas-start"
+                data-bs-scroll="true"
+                data-bs-backdrop="false"
+                tabindex="-1"
+                id="offcanvasScrolling"
+                aria-labelledby="offcanvasScrollingLabel"
+              >
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+                    Offcanvas with body scrolling
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <p>
+                    Try scrolling the rest of the page to see this option in
+                    action.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
     </main>
 
     <!-- Footer -->
