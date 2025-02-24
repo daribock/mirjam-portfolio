@@ -1,0 +1,13 @@
+@font-face {
+  font-family: Drept;
+  src: url(../font/drept.ttf);
+}
+
+body {
+  cursor: url(../images/logo/mirjam.svg), auto;
+}
+
+.meine-schrift {
+  font-family: drept;
+  font-weight: bold;
+}
