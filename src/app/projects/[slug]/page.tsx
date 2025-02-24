@@ -4,19 +4,25 @@ import { Project } from '@/types/projects';
 import { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 
-type Props = {
-  params: { slug: string };
+type Params = {
+  params: Promise<{
+    slug: string;
+  }>;
 };
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
-    slug: project.slug, // Ensure this matches the `[slug]` param
+    params: {
+      slug: project.slug,
+    },
   }));
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const slug = params.slug;
-  const project = projects.find((p) => p.slug === slug);
+export default async function ProjectPage(props: Params) {
+  const params = await props.params;
+  const project = projects.find((p) => p.slug === params.slug) as
+    | Project
+    | undefined;
 
   if (!project) {
     redirect('/projects');
@@ -29,9 +35,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   );
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.slug;
-  const product = projects.find((p) => p.slug === slug) as Project | undefined;
+export async function generateMetadata(props: Params): Promise<Metadata> {
+  const params = await props.params;
+  const product = projects.find((p) => p.slug === params.slug) as
+    | Project
+    | undefined;
+
   if (product) {
     return {
       title: product.title,
