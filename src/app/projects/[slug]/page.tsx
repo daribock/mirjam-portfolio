@@ -1,6 +1,3 @@
-import { Container } from '@/components/Container';
-import PageHeader from '@/components/PageHeader';
-import { Paragraph } from '@/components/Paragraph';
 import { SingleProject } from '@/components/Project';
 import { projects } from '@/constants/projects';
 import { Project } from '@/types/projects';

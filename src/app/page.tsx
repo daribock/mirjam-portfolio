@@ -13,8 +13,8 @@ export default function Home() {
       <HomePageHeader />
       <section className="py-16 bg-primary/5 rounded-3xl px-8 mb-16">
         <blockquote className="text-3xl md:text-4xl text-center max-w-4xl mx-auto text-gray-800 font-lacquer">
-          "Ich bringe Ideen zum Leben und lasse Kreativität in all ihren Formen
-          erstrahlen."
+          &quot;Ich bringe Ideen zum Leben und lasse Kreativität in all ihren
+          Formen erstrahlen.&quot;
         </blockquote>
       </section>
     </div>
