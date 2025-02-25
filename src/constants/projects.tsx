@@ -1,7 +1,7 @@
 import drept from '../../public/images/font/drept.png';
-import mkLogo from '../../public/images/logo/logo-schwarz.png';
-import fireAndLove from '../../public/images/logo/fal.png';
-import visitenKarte from '../../public/images/visitenkarte/visitenkarte.png';
+import mkLogoThumbnail from '../../public/images/logo/logo-thumbnail.jpeg';
+import logoGruen from '../../public/images/logo/logo-gruen.png';
+import logoSchwarz from '../../public/images/logo/logo-schwarz.png';
 import DKTrockenbau1 from '../../public/images/trockenbau-katalog/1.png';
 import DKTrockenbau2 from '../../public/images/trockenbau-katalog/2.png';
 import DKTrockenbau3 from '../../public/images/trockenbau-katalog/3.png';
@@ -9,13 +9,71 @@ import DKTrockenbau4 from '../../public/images/trockenbau-katalog/4.png';
 import DKTrockenbau5 from '../../public/images/trockenbau-katalog/5.png';
 import DKTrockenbau6 from '../../public/images/trockenbau-katalog/6.png';
 import DKTrockenbau7 from '../../public/images/trockenbau-katalog/7.png';
-import instagramPostTaufe from '../../public/images/instagram-posts/taufe.png';
-import instagramPostUnchained from '../../public/images/instagram-posts/unchained.png';
-import instagramPostJugendtreff from '../../public/images/instagram-posts/jugendtreff.png';
+import betaniaInstagramProfile1 from '../../public/images/instagram-posts/betania-instagram-profile1.jpeg';
+import suiteInMe1 from '../../public/images/suite-in-me/suite-in-me.png';
+import suiteInMe2 from '../../public/images/suite-in-me/suite-in-me-2.png';
+import imageFilm1 from '../../public/images/imagefilm/image1.png';
+import imageFilm2 from '../../public/images/imagefilm/image2.png';
+import weihnachtsmusical from '../../public/images/weihnachtsmusical/weihnachtsmusical.jpeg';
 
 import { Project } from '@/types/projects';
 
+// TODO:
+// - Add public properties to project
+// - make images look better
 export const projects: Project[] = [
+  {
+    title: 'Filmdreh - Suite in me',
+    description: 'Zauberlehrling – Eine moderne Interpretation',
+    thumbnail: suiteInMe1,
+    images: [suiteInMe1, suiteInMe2],
+    actionButtons: [
+      {
+        href: 'https://youtu.be/LEmNKN27XNo',
+        text: 'Link zum YouTube video',
+        primary: true,
+      },
+      {
+        href: '/pdf/dialog-suite-me.pdf',
+        text: 'Dialog',
+      },
+      {
+        href: '/pdf/storyboard-suite-me.pdf',
+        text: 'Storyboard',
+      },
+    ],
+    slug: 'filmdreh-suite-in-me',
+    content: (
+      <div>
+        <p>
+          Im Rahmen eines Projekts in der Berufsschule haben meine drei Kollegen
+          und ich die Aufgabe übernommen, die Geschichte des
+          &quot;Zauberlehrlings&quot; in die heutige Zeit zu übertragen. Dabei
+          entwickelten wir die Erzählung weiter, indem wir einen jungen Mann
+          zeigten, der auf der Suche nach mehr Geld in ein pyramidales
+          Geschäftssystem gerät. Der wachsende Druck führt dazu, dass er
+          schließlich zu seinem früheren Leben zurückkehrt.
+        </p>
+        <p>
+          Meine Rolle in diesem Projekt war besonders fokussiert auf die Regie,
+          die Planung und das Drehbuch. Ich konnte viel Zeit in die
+          Strukturierung und Organisation investieren, was mir die Möglichkeit
+          gab, den gesamten kreativen Prozess mitzugestalten. Vom Storyboard
+          über das Drehbuch bis hin zur Planung des Drehtags – ich war aktiv in
+          allen wichtigen Phasen des Projekts beteiligt.
+        </p>
+        <p>
+          Das Projekt war eine wertvolle Erfahrung, bei der ich nicht nur meine
+          Fähigkeiten in der kreativen Arbeit und Teamkoordination verbessern
+          konnte, sondern auch ein tieferes Verständnis für die komplexen
+          Abläufe hinter der Filmproduktion gewann. Trotz der Herausforderungen,
+          die wir während des Drehs hatten, war es ein spannender Prozess, der
+          mir besonders viel Freude bereitet hat und mir zeigte, wie viel
+          Planung und Arbeit in der Produktion eines Films steckt.
+        </p>
+      </div>
+    ),
+  },
   {
     title: 'Trockenbau-Katalog – Klarheit und Übersichtlichkeit',
     description:
@@ -30,9 +88,10 @@ export const projects: Project[] = [
       DKTrockenbau6,
       DKTrockenbau7,
     ],
-    href: 'https://www.canva.com/design/DAGbt5KuZvA/4tdvZv9xdnT9UIC92BQTdg/edit?utm_content=DAGbt5KuZvA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
+    actionButtons: [
+      { href: '/pdf/DK_Trockenbau.pdf', text: 'Live Vorschau', primary: true },
+    ],
     slug: 'trockenbau-katalog',
-    tags: ['Canva'],
     content: (
       <div>
         <p>
@@ -54,52 +113,52 @@ export const projects: Project[] = [
       </div>
     ),
   },
-  {
-    title: 'Umweltfreundlich erschaffen – Die natürliche Bindung des Stillens',
-    description:
-      'Für den Fotowettbewerb mit dem Thema „Umweltfreundlichkeit im Alltag“ habe ich mich mit einem besonders natürlichen und umweltfreundlichen Prozess beschäftigt: dem Stillen.',
-    slug: 'umweltfreundlich-erschaffen-die-natuerliche-bindung-des-stillens',
-    tags: ['Photoshop'],
-    content: (
-      <div>
-        <p>
-          Stillen ist nicht nur eine der nachhaltigsten Möglichkeiten, ein Kind
-          zu ernähren, sondern auch ein Akt, der tief mit der natürlichen
-          Ordnung und den Bedürfnissen des menschlichen Körpers verbunden ist.
-          Es erfordert keine Verpackung, keinen Transport und keine
-          Ressourcennutzung außer dem, was die Natur bereits zur Verfügung
-          stellt.
-        </p>
-        <p>
-          Stillen fördert zudem eine intensive Bindung zwischen Mutter und Kind
-          – eine einzigartige Form der Intimität, die in ihrer Natürlichkeit
-          nicht nur das Wohl des Kindes, sondern auch das der Umwelt im Blick
-          hat. Diese intime Verbindung ist nicht nur ein Zeichen der Fürsorge,
-          sondern auch ein Symbol für die enge Beziehung zwischen Mensch und
-          Natur.
-        </p>
-        <p>
-          Deshalb habe ich den Titel „Umweltfreundlich erschaffen“ gewählt. Denn
-          Stillen zeigt uns, dass wir als Menschen von Natur aus
-          umweltfreundlich geschaffen sind – wir müssen lediglich zurückkehren
-          zu den natürlichen, nachhaltigen Wegen, die uns die Natur vorgibt.
-        </p>
-      </div>
-    ),
-  },
+  // {
+  //   title: 'Umweltfreundlich erschaffen – Die natürliche Bindung des Stillens',
+  //   description:
+  //     'Für den Fotowettbewerb mit dem Thema „Umweltfreundlichkeit im Alltag“ habe ich mich mit einem besonders natürlichen und umweltfreundlichen Prozess beschäftigt: dem Stillen.',
+  //   slug: 'umweltfreundlich-erschaffen-die-natuerliche-bindung-des-stillens',
+  //   tags: ['Photoshop'],
+  //   content: (
+  //     <div>
+  //       <p>
+  //         Stillen ist nicht nur eine der nachhaltigsten Möglichkeiten, ein Kind
+  //         zu ernähren, sondern auch ein Akt, der tief mit der natürlichen
+  //         Ordnung und den Bedürfnissen des menschlichen Körpers verbunden ist.
+  //         Es erfordert keine Verpackung, keinen Transport und keine
+  //         Ressourcennutzung außer dem, was die Natur bereits zur Verfügung
+  //         stellt.
+  //       </p>
+  //       <p>
+  //         Stillen fördert zudem eine intensive Bindung zwischen Mutter und Kind
+  //         – eine einzigartige Form der Intimität, die in ihrer Natürlichkeit
+  //         nicht nur das Wohl des Kindes, sondern auch das der Umwelt im Blick
+  //         hat. Diese intime Verbindung ist nicht nur ein Zeichen der Fürsorge,
+  //         sondern auch ein Symbol für die enge Beziehung zwischen Mensch und
+  //         Natur.
+  //       </p>
+  //       <p>
+  //         Deshalb habe ich den Titel „Umweltfreundlich erschaffen“ gewählt. Denn
+  //         Stillen zeigt uns, dass wir als Menschen von Natur aus
+  //         umweltfreundlich geschaffen sind – wir müssen lediglich zurückkehren
+  //         zu den natürlichen, nachhaltigen Wegen, die uns die Natur vorgibt.
+  //       </p>
+  //     </div>
+  //   ),
+  // },
   {
     title: 'Ehrenamtliche Arbeit als Content Creator in der Kirchengemeinde',
     description:
       'Meine Reise als Mediengestalterin begann 2018, als ich den Instagram-Account meiner Kirchengemeinde ins Leben rief.',
-    thumbnail: instagramPostTaufe,
-    images: [
-      instagramPostTaufe,
-      instagramPostJugendtreff,
-      instagramPostUnchained,
+    thumbnail: betaniaInstagramProfile1,
+    actionButtons: [
+      {
+        href: 'https://www.instagram.com/betaniaingolstadt/',
+        text: 'Link zur Instagram Seite',
+        primary: true,
+      },
     ],
-    href: 'https://www.instagram.com/betaniaingolstadt/',
     slug: 'ehrenamtliche-arbeit-als-content-creator-in-der-kirchengemeinde',
-    tags: ['Canva'],
     content: (
       <div>
         <p>
@@ -124,6 +183,75 @@ export const projects: Project[] = [
     ),
   },
   {
+    title: 'Imagefilm',
+    description:
+      '3D-Modelling, Lighting, Shading & Animation – Eine Welt aus Vorstellungskraft',
+    thumbnail: imageFilm1,
+    images: [imageFilm1, imageFilm2],
+    slug: 'imagefilm',
+    content: (
+      <div>
+        <p>
+          Diese Pre-Renderings sind Einblicke in ein laufendes Projekt – einen
+          Imagefilm, den ich im 3D-Raum erschaffe. Zwei der aufgebauten Szenen
+          sowie eine Test-Animation zeigen den kreativen Prozess hinter der
+          Gestaltung einer digitalen Welt.
+        </p>
+        <p>
+          Für dieses Projekt arbeite ich mit Blender, einem Tool, das mir
+          erlaubt, meiner Imagination freien Lauf zu lassen. Hier entstehen
+          nicht nur Formen, sondern ganze Atmosphären – durch gezieltes
+          Modelling, Lichtsetzung und Materialgestaltung. Jeder Schatten, jede
+          Oberfläche und jede Bewegung trägt dazu bei, eine lebendige, visuelle
+          Erzählung zu erschaffen.
+        </p>
+        <p>
+          Dieses Projekt ist für mich eine spielerische, aber auch technisch
+          anspruchsvolle Reise, bei der ich stetig neue Wege finde, um Räume,
+          Stimmungen und Emotionen digital zum Leben zu erwecken.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: 'Weihnachtsmusical – Eine neue Perspektive auf die alte Geschichte',
+    description:
+      'Gemeinsam mit meiner Kollegin und Schwester setzten wir uns das Ziel, ein Weihnachtsmusical zu schaffen, das mehr zeigt als die übliche, idealisierte Erzählung von Maria und Josef.',
+    thumbnail: weihnachtsmusical,
+    actionButtons: [
+      {
+        href: '/pdf/weihnachtsmusical-vorschau.pdf',
+        text: 'Script',
+        primary: true,
+      },
+    ],
+    slug: 'drept',
+    content: (
+      <div>
+        <p>
+          Wir wollten die Geschichte nicht nur in ihrer Schönheit darstellen,
+          sondern auch die Schattenseiten, die Herausforderungen und die tiefen
+          menschlichen Emotionen, die oft übersehen werden.
+        </p>
+        <p>
+          Da wir kein bestehendes Werk fanden, das unseren Vorstellungen gerecht
+          wurde, beschlossen wir, es selbst in die Hand zu nehmen. Innerhalb
+          weniger Wochen schrieben wir gemeinsam ein vollständiges Musical, das
+          rund eine Stunde lang war und den Gottesdienst auf eine neue,
+          authentische Weise bereicherte.
+        </p>
+        <p>
+          Dieses Projekt war nicht nur eine kreative Herausforderung, sondern
+          auch eine Gelegenheit, unsere Vision von Weihnachten neu zu
+          interpretieren und eine Geschichte zu erzählen, die sowohl die dunklen
+          als auch die leuchtenden Aspekte des Lebens aufgreift. Es war ein
+          intensiver, aber unvergesslicher Prozess, der uns beide als
+          Künstlerinnen und als Schwestern noch enger zusammenbrachte.
+        </p>
+      </div>
+    ),
+  },
+  {
     title: 'Drept',
     description: 'Das ist meine eigene Schrift mit dem Namen Drept.',
     thumbnail: drept,
@@ -141,8 +269,8 @@ export const projects: Project[] = [
     title: 'MK Logo – Der Mauszeiger als Signatur meiner Kreativität',
     description:
       'In einer Welt, in der jeder Klick eine Entscheidung ist, jedes Symbol eine Sprache spricht und jedes Zeichen eine Geschichte erzählt, wollte ich ein Zeichen setzen – mein eigenes.',
-    thumbnail: mkLogo,
-    images: [mkLogo, fireAndLove],
+    thumbnail: mkLogoThumbnail,
+    images: [logoGruen, logoSchwarz],
     slug: 'logos',
     content: (
       <div>
@@ -163,11 +291,5 @@ export const projects: Project[] = [
         </p>
       </div>
     ),
-  },
-  {
-    title: 'Visitenkarte',
-    description: 'Meine eigene Visitenkarte',
-    thumbnail: visitenKarte,
-    slug: 'visitenkarte',
   },
 ];

@@ -74,16 +74,24 @@ export const SingleProject = ({ project }: { project: Project }) => {
         <p className="lead">{project.description}</p>
         {project.content}
       </div>
-      {project.href && (
-        <a
-          href={project.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
-        >
-          Live Vorschau
-          <ExternalLink size={20} />
-        </a>
+      {project.actionButtons?.length && (
+        <div className="flex flex-wrap gap-4">
+          {project.actionButtons.map(({ href, icon, text }) => {
+            return (
+              <a
+                key={href}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                // TODO: Create different btns use shadecn button
+                className={`inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors`}
+              >
+                {text}
+                {icon ? icon : <ExternalLink size={20} />}
+              </a>
+            );
+          })}
+        </div>
       )}
     </section>
   );

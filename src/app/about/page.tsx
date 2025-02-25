@@ -1,5 +1,6 @@
 import PageHeader from '@/components/PageHeader';
 import Timeline from '@/components/Timeline';
+import aboutImage from '../../../public/images/about-image.svg';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,7 +12,10 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <div className="container mx-auto px-4">
-      <PageHeader title="About" showLogo />
+      <PageHeader
+        title="About"
+        image={{ staticImageData: aboutImage, height: 100, width: 100 }}
+      />
 
       <section className="max-w-4xl mx-auto mb-16">
         <h2 className="text-3xl font-lacquer text-primary mb-6">Hallo,</h2>

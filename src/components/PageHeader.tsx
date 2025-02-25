@@ -1,17 +1,25 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
+
+type imageType = {
+  staticImageData: StaticImageData;
+  width?: number;
+  height?: number;
+};
 
 interface PageHeaderProps {
   title: string;
   subtitle?: string;
+  image?: imageType;
   showLogo?: boolean;
 }
 
 export default function PageHeader({
   title,
   subtitle,
+  image,
   showLogo,
 }: PageHeaderProps) {
   return (
@@ -41,18 +49,19 @@ export default function PageHeader({
             )}
           </div>
 
-          {showLogo && (
-            <div className="hidden md:block md:w-64">
-              <Image
-                src="/images/logo/logo-blau.png"
-                alt="Logo Mirjam Kletter"
-                width={400}
-                height={400}
-                className="w-full h-auto"
-                priority
-              />
-            </div>
-          )}
+          {showLogo ||
+            (image && (
+              <div className="hidden md:block md:w-64">
+                <Image
+                  src={image.staticImageData || '/images/logo/logo-blau.png'}
+                  alt="Logo Mirjam Kletter"
+                  width={image.width || 400}
+                  height={image.height || 400}
+                  className="w-3xs h-auto"
+                  priority
+                />
+              </div>
+            ))}
         </div>
       </motion.div>
     </header>
