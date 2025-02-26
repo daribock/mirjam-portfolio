@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { navlinks } from '@/constants/navlinks';
+import { Button } from './ui/button';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,13 +18,15 @@ export default function Navbar() {
           </Link>
 
           {/* Mobile menu button */}
-          <button
+          <Button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden"
+            variant="ghost"
+            size="icon"
+            className="md:hidden bg-none"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          </Button>
 
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-8">

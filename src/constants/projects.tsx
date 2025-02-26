@@ -24,6 +24,7 @@ import { Project } from '@/types/projects';
 export const projects: Project[] = [
   {
     title: 'Filmdreh - Suite in me',
+    public: true,
     description: 'Zauberlehrling – Eine moderne Interpretation',
     thumbnail: suiteInMe1,
     images: [suiteInMe1, suiteInMe2],
@@ -78,6 +79,7 @@ export const projects: Project[] = [
     title: 'Trockenbau-Katalog – Klarheit und Übersichtlichkeit',
     description:
       'Dieser Katalog wurde entwickelt, um die Dienstleistungen einer Trockenbaufirma auf einfache und übersichtliche Weise darzustellen.',
+    public: true,
     thumbnail: DKTrockenbau1,
     images: [
       DKTrockenbau1,
@@ -113,43 +115,45 @@ export const projects: Project[] = [
       </div>
     ),
   },
-  // {
-  //   title: 'Umweltfreundlich erschaffen – Die natürliche Bindung des Stillens',
-  //   description:
-  //     'Für den Fotowettbewerb mit dem Thema „Umweltfreundlichkeit im Alltag“ habe ich mich mit einem besonders natürlichen und umweltfreundlichen Prozess beschäftigt: dem Stillen.',
-  //   slug: 'umweltfreundlich-erschaffen-die-natuerliche-bindung-des-stillens',
-  //   tags: ['Photoshop'],
-  //   content: (
-  //     <div>
-  //       <p>
-  //         Stillen ist nicht nur eine der nachhaltigsten Möglichkeiten, ein Kind
-  //         zu ernähren, sondern auch ein Akt, der tief mit der natürlichen
-  //         Ordnung und den Bedürfnissen des menschlichen Körpers verbunden ist.
-  //         Es erfordert keine Verpackung, keinen Transport und keine
-  //         Ressourcennutzung außer dem, was die Natur bereits zur Verfügung
-  //         stellt.
-  //       </p>
-  //       <p>
-  //         Stillen fördert zudem eine intensive Bindung zwischen Mutter und Kind
-  //         – eine einzigartige Form der Intimität, die in ihrer Natürlichkeit
-  //         nicht nur das Wohl des Kindes, sondern auch das der Umwelt im Blick
-  //         hat. Diese intime Verbindung ist nicht nur ein Zeichen der Fürsorge,
-  //         sondern auch ein Symbol für die enge Beziehung zwischen Mensch und
-  //         Natur.
-  //       </p>
-  //       <p>
-  //         Deshalb habe ich den Titel „Umweltfreundlich erschaffen“ gewählt. Denn
-  //         Stillen zeigt uns, dass wir als Menschen von Natur aus
-  //         umweltfreundlich geschaffen sind – wir müssen lediglich zurückkehren
-  //         zu den natürlichen, nachhaltigen Wegen, die uns die Natur vorgibt.
-  //       </p>
-  //     </div>
-  //   ),
-  // },
+  {
+    title: 'Umweltfreundlich erschaffen – Die natürliche Bindung des Stillens',
+    description:
+      'Für den Fotowettbewerb mit dem Thema „Umweltfreundlichkeit im Alltag“ habe ich mich mit einem besonders natürlichen und umweltfreundlichen Prozess beschäftigt: dem Stillen.',
+    public: false,
+    slug: 'umweltfreundlich-erschaffen-die-natuerliche-bindung-des-stillens',
+    tags: ['Photoshop'],
+    content: (
+      <div>
+        <p>
+          Stillen ist nicht nur eine der nachhaltigsten Möglichkeiten, ein Kind
+          zu ernähren, sondern auch ein Akt, der tief mit der natürlichen
+          Ordnung und den Bedürfnissen des menschlichen Körpers verbunden ist.
+          Es erfordert keine Verpackung, keinen Transport und keine
+          Ressourcennutzung außer dem, was die Natur bereits zur Verfügung
+          stellt.
+        </p>
+        <p>
+          Stillen fördert zudem eine intensive Bindung zwischen Mutter und Kind
+          – eine einzigartige Form der Intimität, die in ihrer Natürlichkeit
+          nicht nur das Wohl des Kindes, sondern auch das der Umwelt im Blick
+          hat. Diese intime Verbindung ist nicht nur ein Zeichen der Fürsorge,
+          sondern auch ein Symbol für die enge Beziehung zwischen Mensch und
+          Natur.
+        </p>
+        <p>
+          Deshalb habe ich den Titel „Umweltfreundlich erschaffen“ gewählt. Denn
+          Stillen zeigt uns, dass wir als Menschen von Natur aus
+          umweltfreundlich geschaffen sind – wir müssen lediglich zurückkehren
+          zu den natürlichen, nachhaltigen Wegen, die uns die Natur vorgibt.
+        </p>
+      </div>
+    ),
+  },
   {
     title: 'Ehrenamtliche Arbeit als Content Creator in der Kirchengemeinde',
     description:
       'Meine Reise als Mediengestalterin begann 2018, als ich den Instagram-Account meiner Kirchengemeinde ins Leben rief.',
+    public: true,
     thumbnail: betaniaInstagramProfile1,
     actionButtons: [
       {
@@ -186,6 +190,7 @@ export const projects: Project[] = [
     title: 'Imagefilm',
     description:
       '3D-Modelling, Lighting, Shading & Animation – Eine Welt aus Vorstellungskraft',
+    public: true,
     thumbnail: imageFilm1,
     images: [imageFilm1, imageFilm2],
     slug: 'imagefilm',
@@ -218,6 +223,7 @@ export const projects: Project[] = [
     description:
       'Gemeinsam mit meiner Kollegin und Schwester setzten wir uns das Ziel, ein Weihnachtsmusical zu schaffen, das mehr zeigt als die übliche, idealisierte Erzählung von Maria und Josef.',
     thumbnail: weihnachtsmusical,
+    public: true,
     actionButtons: [
       {
         href: '/pdf/weihnachtsmusical-vorschau.pdf',
@@ -225,7 +231,7 @@ export const projects: Project[] = [
         primary: true,
       },
     ],
-    slug: 'drept',
+    slug: 'weihnachtsmusical-eine-neue-perspektive-auf-die-alte-geschichte',
     content: (
       <div>
         <p>
@@ -254,6 +260,7 @@ export const projects: Project[] = [
   {
     title: 'Drept',
     description: 'Das ist meine eigene Schrift mit dem Namen Drept.',
+    public: true,
     thumbnail: drept,
     slug: 'drept',
     content: (
@@ -269,6 +276,7 @@ export const projects: Project[] = [
     title: 'MK Logo – Der Mauszeiger als Signatur meiner Kreativität',
     description:
       'In einer Welt, in der jeder Klick eine Entscheidung ist, jedes Symbol eine Sprache spricht und jedes Zeichen eine Geschichte erzählt, wollte ich ein Zeichen setzen – mein eigenes.',
+    public: true,
     thumbnail: mkLogoThumbnail,
     images: [logoGruen, logoSchwarz],
     slug: 'logos',

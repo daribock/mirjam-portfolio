@@ -7,6 +7,8 @@ import { Heading } from './Heading';
 import { motion } from 'framer-motion';
 import placeholder from '../../public/images/placeholder-image.png';
 import { ExternalLink } from 'lucide-react';
+import { buttonVariants } from './ui/button';
+import { Badge } from './ui/badge';
 
 export const SingleProject = ({ project }: { project: Project }) => {
   const [activeImage, setActiveImage] = useState<StaticImageData | string>(
@@ -61,12 +63,7 @@ export const SingleProject = ({ project }: { project: Project }) => {
         <Heading className="mb-5">{project.title}</Heading>
         <div className="flex space-x-2">
           {project.tags?.map((tag: string) => (
-            <span
-              key={tag}
-              className="px-3 py-1 bg-primary/5 text-primary rounded-full text-sm"
-            >
-              {tag}
-            </span>
+            <Badge key={tag}>{tag}</Badge>
           ))}
         </div>
       </div>
@@ -76,15 +73,18 @@ export const SingleProject = ({ project }: { project: Project }) => {
       </div>
       {project.actionButtons?.length && (
         <div className="flex flex-wrap gap-4">
-          {project.actionButtons.map(({ href, icon, text }) => {
+          {project.actionButtons.map(({ href, icon, primary, text }) => {
             return (
               <a
                 key={href}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                // TODO: Create different btns use shadecn button
-                className={`inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors`}
+                className={
+                  primary
+                    ? buttonVariants({ variant: 'default' })
+                    : buttonVariants({ variant: 'outline' })
+                }
               >
                 {text}
                 {icon ? icon : <ExternalLink size={20} />}

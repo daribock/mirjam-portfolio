@@ -8,12 +8,14 @@ const mplus = M_PLUS_1_Code({
   subsets: ['latin'],
   weight: ['400'],
   variable: '--font-mplus',
+  display: 'swap',
 });
 
 const lacquer = Lacquer({
   subsets: ['latin'],
   weight: ['400'],
   variable: '--font-lacquer',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { buttonVariants } from './ui/button';
 
 export default function HomePageHeader() {
   return (
@@ -31,10 +32,7 @@ export default function HomePageHeader() {
               Kreative Gestalterin mit Herz und Leidenschaft für visuelle
               Medien, Musik und ausdrucksstarkes Design.
             </p>
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
-            >
+            <Link href="/projects" className={buttonVariants({ size: 'lg' })}>
               Projekte ansehen
               <ArrowRight size={20} />
             </Link>

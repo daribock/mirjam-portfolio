@@ -12,6 +12,7 @@ export type Project = {
   title: string;
   slug: string;
   description: string;
+  public: boolean;
   thumbnail?: StaticImageData;
   actionButtons?: ActionButtonType[];
   pdfDownload?: string;
