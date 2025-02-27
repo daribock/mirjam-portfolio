@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.0](https://github.com/daribock/mirjam-portfolio/compare/v1.0.0...v1.1.0) (2025-02-27)
+
+
+### Features
+
+* add new projects ([922d2c3](https://github.com/daribock/mirjam-portfolio/commit/922d2c3b78f3c61cfff03fd9f07de4695f159a71))
+* delete paragraph component ([657609a](https://github.com/daribock/mirjam-portfolio/commit/657609a2c40e01c5e067e76b7976fa25c9f05d54))
+* Init shadecn and add button and badge component ([eae5a81](https://github.com/daribock/mirjam-portfolio/commit/eae5a81232e7ea6552f8936a53d9616aed2bfa6b))
+* smaller fade ([070088b](https://github.com/daribock/mirjam-portfolio/commit/070088b4c93e3780c6588db1fa9c04f8e99ef124))
+
+
+### Bug Fixes
+
+* pageheader componen ([648a21e](https://github.com/daribock/mirjam-portfolio/commit/648a21e3ba0307e24603316808ec90631415e90e))
+
 ## 1.0.0 (2025-02-24)
 
 
