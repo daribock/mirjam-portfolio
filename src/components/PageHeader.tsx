@@ -22,6 +22,40 @@ export default function PageHeader({
   image,
   showLogo,
 }: PageHeaderProps) {
+  const renderImage = () => {
+    if (image) {
+      return (
+        <div className="hidden md:block">
+          <Image
+            src={image.staticImageData}
+            alt="Logo Mirjam Kletter"
+            width={image.width || 400}
+            height={image.height || 400}
+            className="w-3xs h-auto"
+            priority
+          />
+        </div>
+      );
+    }
+
+    if (showLogo) {
+      return (
+        <div className="hidden md:block md:w-64">
+          <Image
+            src={'/images/logo/logo-blau.png'}
+            alt="Logo Mirjam Kletter"
+            width={400}
+            height={400}
+            className="w-3xs h-auto"
+            priority
+          />
+        </div>
+      );
+    }
+
+    return null;
+  };
+
   return (
     <header className="py-16 md:py-24">
       <motion.div
@@ -48,20 +82,7 @@ export default function PageHeader({
               <p className="text-xl text-gray-600 max-w-xl">{subtitle}</p>
             )}
           </div>
-
-          {showLogo ||
-            (image && (
-              <div className="hidden md:block md:w-64">
-                <Image
-                  src={image.staticImageData || '/images/logo/logo-blau.png'}
-                  alt="Logo Mirjam Kletter"
-                  width={image.width || 400}
-                  height={image.height || 400}
-                  className="w-3xs h-auto"
-                  priority
-                />
-              </div>
-            ))}
+          {renderImage()}
         </div>
       </motion.div>
     </header>
