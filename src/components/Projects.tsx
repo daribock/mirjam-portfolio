@@ -6,6 +6,13 @@ import { projects } from '@/constants/projects';
 import { ExternalLink } from 'lucide-react';
 import placeholder from '../../public/images/placeholder-image.png';
 import { Badge } from './ui/badge';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from './ui/card';
 
 export const Products = () => {
   return (
@@ -16,38 +23,39 @@ export const Products = () => {
           const { title, description, slug, tags, thumbnail } = project;
 
           return (
-            <article
-              key={idx}
-              className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
-            >
-              <div className="aspect-video relative overflow-hidden">
-                <Image
-                  src={thumbnail || placeholder}
-                  alt={title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  {title}
-                </h3>
-                <p className="text-gray-600 mb-4">{description}</p>
-                {tags && (
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {tags.map((tag) => (
-                      <Badge key={tag}>{tag}</Badge>
-                    ))}
-                  </div>
-                )}
-                <Link
-                  href={`/projects/${slug}`}
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-                >
-                  Mehr erfahren
-                  <ExternalLink size={16} />
-                </Link>
-              </div>
+            <article key={idx}>
+              <Card className="group overflow-hidden relativ h-full">
+                <div className="aspect-video relative overflow-hidden">
+                  <Image
+                    src={thumbnail || placeholder}
+                    alt={title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>{title}</CardTitle>
+                  {tags && (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {tags.map((tag) => (
+                        <Badge key={tag}>{tag}</Badge>
+                      ))}
+                    </div>
+                  )}
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-gray-600 mb-4">
+                    {description}
+                  </CardDescription>
+                  <Link
+                    href={`/projects/${slug}`}
+                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                  >
+                    Mehr erfahren
+                    <ExternalLink size={16} />
+                  </Link>
+                </CardContent>
+              </Card>
             </article>
           );
         })}
