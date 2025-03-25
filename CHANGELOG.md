@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/daribock/mirjam-portfolio/compare/v1.1.0...v1.2.0) (2025-03-25)
+
+
+### Features
+
+* use card component from shadecn ([cf6479c](https://github.com/daribock/mirjam-portfolio/commit/cf6479ce29a1d2b45e25eda3c88cab94067f7b46))
+* use heading and container component everywhere it should be used ([3249785](https://github.com/daribock/mirjam-portfolio/commit/3249785d4f05360db642024817f5caf898d2f874))
+
 ## [1.1.0](https://github.com/daribock/mirjam-portfolio/compare/v1.0.0...v1.1.0) (2025-02-27)
 
 
