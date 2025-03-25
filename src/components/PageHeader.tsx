@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
+import { Heading } from './Heading';
 
 type imageType = {
   staticImageData: StaticImageData;
@@ -74,10 +75,10 @@ export default function PageHeader({
       >
         <div className="flex flex-row items-center justify-between gap-8">
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold text-primary">
+            <Heading>
               <span className="block font-mplus">{title}</span>
               <span className="block font-lacquer">{title}</span>
-            </h1>
+            </Heading>
             {subtitle && (
               <p className="text-xl text-gray-600 max-w-xl">{subtitle}</p>
             )}

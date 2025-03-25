@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { buttonVariants } from './ui/button';
+import { Heading } from './Heading';
 
 export default function HomePageHeader() {
   return (
@@ -24,10 +25,10 @@ export default function HomePageHeader() {
       >
         <div className="flex flex-row items-center justify-between gap-8">
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold text-primary">
+            <Heading>
               <span className="block font-mplus">Mirjam</span>
               <span className="block font-lacquer">Kletter</span>
-            </h1>
+            </Heading>
             <p className="text-xl text-gray-600 max-w-xl">
               Kreative Gestalterin mit Herz und Leidenschaft für visuelle
               Medien, Musik und ausdrucksstarkes Design.

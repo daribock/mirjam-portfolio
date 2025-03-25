@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Container } from './Container';
 
 export default function Footer() {
   return (
     <footer className="bg-primary text-white py-8 mt-auto">
-      <div className="container mx-auto px-4">
+      <Container>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           <div className="text-center">
             <p className="font-medium">Mirjam Jennifer Kletter</p>
@@ -33,7 +34,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }
