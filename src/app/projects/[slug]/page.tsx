@@ -12,9 +12,7 @@ type Params = {
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
-    params: {
-      slug: project.slug,
-    },
+    slug: project.slug,
   }));
 }
 
