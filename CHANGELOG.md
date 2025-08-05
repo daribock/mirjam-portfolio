@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/daribock/mirjam-portfolio/compare/v1.2.0...v1.3.0) (2025-08-05)
+
+
+### Features
+
+* change next config to output: export ([42b8d17](https://github.com/daribock/mirjam-portfolio/commit/42b8d1737e693ed45e0d4c4b9c5999a6f0b632d3))
+* change next config to output: export ([e8b23ef](https://github.com/daribock/mirjam-portfolio/commit/e8b23ef2adb9d00c3b3b0c65817d2a17794c01f6))
+
 ## [1.2.0](https://github.com/daribock/mirjam-portfolio/compare/v1.1.0...v1.2.0) (2025-03-25)
 
 
