@@ -1,25 +1,21 @@
 ---
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "monthly"
-    reviewers:
-      - darikletter
+      interval: 'monthly'
     labels:
-      - "github action"
-      - "dependencies"
+      - 'github action'
+      - 'dependencies'
     open-pull-requests-limit: 10
 
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "monthly"
+      interval: 'monthly'
     versioning-strategy: increase
     labels:
-      - "npm"
-      - "dependencies"
-    reviewers:
-      - darikletter
+      - 'npm'
+      - 'dependencies'
     open-pull-requests-limit: 10
