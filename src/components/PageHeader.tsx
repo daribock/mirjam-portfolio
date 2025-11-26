@@ -32,7 +32,6 @@ export default function PageHeader({
             alt="Logo Mirjam Kletter"
             width={image.width || 400}
             height={image.height || 400}
-            className="w-3xs h-auto"
             priority
           />
         </div>
@@ -47,7 +46,6 @@ export default function PageHeader({
             alt="Logo Mirjam Kletter"
             width={400}
             height={400}
-            className="w-3xs h-auto"
             priority
           />
         </div>
