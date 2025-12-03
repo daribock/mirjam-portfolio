@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/daribock/mirjam-portfolio/compare/v1.2.0...v1.3.0) (2025-11-26)
+
+
+### Features
+
+* add next-sitemap package ([b75ab9e](https://github.com/daribock/mirjam-portfolio/commit/b75ab9ec81eacf0915de21cbfce2ca3cc8271fc1))
+* add next-sitemap package ([378711e](https://github.com/daribock/mirjam-portfolio/commit/378711e633f2f67d836d62169508cddf9e7dd4a0))
+* change next config to output: export ([42b8d17](https://github.com/daribock/mirjam-portfolio/commit/42b8d1737e693ed45e0d4c4b9c5999a6f0b632d3))
+* change next config to output: export ([e8b23ef](https://github.com/daribock/mirjam-portfolio/commit/e8b23ef2adb9d00c3b3b0c65817d2a17794c01f6))
+* update packages ([ab4cd78](https://github.com/daribock/mirjam-portfolio/commit/ab4cd787ad38631ad1cc31c8752684302e433593))
+* update packages ([13c9dd0](https://github.com/daribock/mirjam-portfolio/commit/13c9dd0ea995183e3a6deb189c5fa39bf444cf9e))
+
 ## [1.2.0](https://github.com/daribock/mirjam-portfolio/compare/v1.1.0...v1.2.0) (2025-03-25)
 
 
