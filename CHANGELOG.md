@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/daribock/mirjam-portfolio/compare/v1.3.0...v1.4.0) (2025-12-04)
+
+
+### Features
+
+* remove .draft folder ([9a27ca4](https://github.com/daribock/mirjam-portfolio/commit/9a27ca4e3d21329244dc24f87b7028b3de6c2bcc))
+* update next.js ([6b7850a](https://github.com/daribock/mirjam-portfolio/commit/6b7850ae8202e6314d6253d7a36f58e79a4beece))
+
 ## [1.3.0](https://github.com/daribock/mirjam-portfolio/compare/v1.2.0...v1.3.0) (2025-11-26)
 
 
