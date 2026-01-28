@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.4.0](https://github.com/daribock/mirjam-portfolio/compare/v1.3.0...v1.4.0) (2026-01-28)
+
+
+### Features
+
+* add carousal to project pages and polish the theme ([d63775c](https://github.com/daribock/mirjam-portfolio/commit/d63775c172562daed00a398610b3f744657a6010))
+* add carousal to project pages and polish the theme ([f9cbc79](https://github.com/daribock/mirjam-portfolio/commit/f9cbc795ccf4e07134b388bbe824e6c21fbd2b39))
+* remove .draft folder ([9a27ca4](https://github.com/daribock/mirjam-portfolio/commit/9a27ca4e3d21329244dc24f87b7028b3de6c2bcc))
+* update deps ([4a896d0](https://github.com/daribock/mirjam-portfolio/commit/4a896d0ac12c93a82d7ca0b21f1bff7098bafebc))
+* update deps ([c6a79de](https://github.com/daribock/mirjam-portfolio/commit/c6a79de97af540a46e16eb9b6b8d0909c9b6e17f))
+* update next.js ([6b7850a](https://github.com/daribock/mirjam-portfolio/commit/6b7850ae8202e6314d6253d7a36f58e79a4beece))
+* **update:** nextjs ([11b4f67](https://github.com/daribock/mirjam-portfolio/commit/11b4f67fde78cf5ffeba29e9ca673143dfde85ef))
+
+
+### Bug Fixes
+
+* release-please action ([defa814](https://github.com/daribock/mirjam-portfolio/commit/defa81473ae53c2b55c7980d4fbef509a4e44e10))
+
 ## [1.3.0](https://github.com/daribock/mirjam-portfolio/compare/v1.2.0...v1.3.0) (2025-11-26)
 
 
