@@ -1,19 +1,43 @@
 'use client';
 
 import { Project } from '@/types/projects';
-import Image, { StaticImageData } from 'next/image';
-import React, { useState } from 'react';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { Heading } from './Heading';
 import { motion } from 'framer-motion';
-import placeholder from '../../public/images/placeholder-image.png';
+import Autoplay from 'embla-carousel-autoplay';
 import { ExternalLink } from 'lucide-react';
 import { buttonVariants } from './ui/button';
 import { Badge } from './ui/badge';
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from './ui/carousel';
+import { Card, CardContent } from './ui/card';
 
 export const SingleProject = ({ project }: { project: Project }) => {
-  const [activeImage, setActiveImage] = useState<StaticImageData | string>(
-    project.thumbnail || placeholder
-  );
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on('select', () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+
+    api.on('pointerUp', Autoplay);
+  }, [api]);
 
   return (
     <section>
@@ -32,41 +56,50 @@ export const SingleProject = ({ project }: { project: Project }) => {
         key={project.slug}
         className="relative"
       >
-        <Image
-          src={activeImage}
-          alt="thumbnail"
-          height="1000"
-          width="1000"
-          className="rounded-md object-contain"
-        />
-        <div className="absolute bottom-0 bg-white h-10 lg:h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
-      </motion.div>
-      {project.images && (
-        <div className="flex flex-row justify-center my-8 flex-wrap">
-          {project.images.map((image, idx) => (
-            <button
-              onClick={() => setActiveImage(image)}
-              key={`image-thumbnail-${idx}`}
+        <div className="flex flex-col gap-6">
+          <Heading className="mb-5">{project.title}</Heading>
+          <div className="flex space-x-2">
+            {project.tags?.map((tag: string) => (
+              <Badge key={tag}>{tag}</Badge>
+            ))}
+          </div>
+        </div>
+        {project.images && (
+          <>
+            <Carousel
+              setApi={setApi}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                }),
+              ]}
             >
-              <Image
-                src={image}
-                alt="project thumbnail"
-                height="1000"
-                width="1000"
-                className="h-14 w-16 md:h-40 md:w-60 object-cover object-top mr-4 mb-r border rounded-lg border-neutral-100"
-              />
-            </button>
-          ))}
-        </div>
-      )}
-      <div className="flex flex-col gap-6">
-        <Heading className="mb-5">{project.title}</Heading>
-        <div className="flex space-x-2">
-          {project.tags?.map((tag: string) => (
-            <Badge key={tag}>{tag}</Badge>
-          ))}
-        </div>
-      </div>
+              <CarouselContent className="flex items-center">
+                {project.images.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <Card>
+                      <CardContent className="flex aspect-square items-center justify-center p-6">
+                        <Image
+                          src={image}
+                          alt="project thumbnail"
+                          height="450"
+                          width="800"
+                          className="object-cover object-top border rounded-lg border-neutral-100"
+                        />
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+            <div className="text-muted-foreground py-2 text-center text-sm">
+              Slide {current} of {count}
+            </div>
+          </>
+        )}
+      </motion.div>
       <div className="prose md:prose-lg lg:prose-xl max-w-none text-neutral-600 mt-4">
         <p className="lead">{project.description}</p>
         {project.content}
