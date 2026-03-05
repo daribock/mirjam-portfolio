@@ -35,8 +35,6 @@ export const SingleProject = ({ project }: { project: Project }) => {
     api.on('select', () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
-
-    api.on('pointerUp', Autoplay);
   }, [api]);
 
   return (
@@ -81,7 +79,7 @@ export const SingleProject = ({ project }: { project: Project }) => {
                       <CardContent className="flex aspect-square items-center justify-center p-6">
                         <Image
                           src={image}
-                          alt="project thumbnail"
+                          alt={`${project.title} – Bild ${index + 1}`}
                           height="450"
                           width="800"
                           className="object-cover object-top border rounded-lg border-neutral-100"
