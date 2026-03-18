@@ -4,7 +4,7 @@ updates:
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: 'monthly'
+      interval: 'weekly'
     labels:
       - 'github action'
       - 'dependencies'
@@ -13,7 +13,7 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'monthly'
+      interval: 'weekly'
     versioning-strategy: increase
     labels:
       - 'npm'
