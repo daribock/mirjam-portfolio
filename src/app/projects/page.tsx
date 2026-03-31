@@ -4,9 +4,15 @@ import { Products } from '@/components/Projects';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Projects | Mirjam Kletter',
+  title: 'Projekte',
   description:
-    'Kreative Gestalterin mit Herz und Leidenschaft für visuelle Medien, Musik und ausdrucksstarkes Design.',
+    'Entdecke die kreativen Projekte von Mirjam Kletter – Grafikdesign, digitale Medien, 3D-Modelling und mehr.',
+  openGraph: {
+    title: 'Projekte | Mirjam Kletter',
+    description:
+      'Entdecke die kreativen Projekte von Mirjam Kletter – Grafikdesign, digitale Medien, 3D-Modelling und mehr.',
+    url: '/projects',
+  },
 };
 
 export default function Projects() {

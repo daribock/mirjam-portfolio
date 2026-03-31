@@ -2,9 +2,15 @@ import HomePageHeader from '@/components/HomePageHeader';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Home | Mirjam Kletter',
+  title: 'Home',
   description:
     'Kreative Gestalterin mit Herz und Leidenschaft für visuelle Medien, Musik und ausdrucksstarkes Design.',
+  openGraph: {
+    title: 'Mirjam Kletter – Kreative Mediengestalterin',
+    description:
+      'Kreative Gestalterin mit Herz und Leidenschaft für visuelle Medien, Musik und ausdrucksstarkes Design.',
+    url: '/',
+  },
 };
 
 export default function Home() {

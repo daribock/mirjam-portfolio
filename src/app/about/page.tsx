@@ -4,9 +4,15 @@ import aboutImage from '../../../public/images/about-image.svg';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About | Mirjam Kletter',
+  title: 'About',
   description:
-    'Kreative Gestalterin mit Herz und Leidenschaft für visuelle Medien, Musik und ausdrucksstarkes Design.',
+    'Erfahre mehr über Mirjam Jennifer Kletter – kreative Mediengestalterin mit Leidenschaft für Design, digitale Medien und Musik.',
+  openGraph: {
+    title: 'About | Mirjam Kletter',
+    description:
+      'Erfahre mehr über Mirjam Jennifer Kletter – kreative Mediengestalterin mit Leidenschaft für Design, digitale Medien und Musik.',
+    url: '/about',
+  },
 };
 
 export default function About() {
