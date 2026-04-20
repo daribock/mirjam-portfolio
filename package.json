@@ -36,6 +36,6 @@
     "eslint-config-next": "16.2.3",
     "postcss": "^8.5.10",
     "tailwind-merge": "^3.5.0",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   }
 }
