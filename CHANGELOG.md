@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.0](https://github.com/daribock/mirjam-portfolio/compare/v1.4.0...v1.5.0) (2026-09-21)
+
+
+### Features
+
+* update Dependabot schedule to weekly and add auto-merge workflow ([#119](https://github.com/daribock/mirjam-portfolio/issues/119)) ([49de605](https://github.com/daribock/mirjam-portfolio/commit/49de60586c26ca71f52983dcf5d41d4084694611))
+
+
+### Bug Fixes
+
+* **refactor:** extract TimelineSection to reduce code duplication in Timeline component ([#279](https://github.com/daribock/mirjam-portfolio/issues/279)) ([c6a1aec](https://github.com/daribock/mirjam-portfolio/commit/c6a1aecc7d06eda5d095ff0673072904258c28e5))
+
 ## [1.4.0](https://github.com/daribock/mirjam-portfolio/compare/v1.3.0...v1.4.0) (2026-01-28)
 
 
